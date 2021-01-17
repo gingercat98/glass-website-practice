@@ -5,7 +5,24 @@
   box-sizing: border-box;
 }
 
+h1 {
+  color: #426696;
+  font-weight: 600;
+  font-size: 3rem;
+  opacity: 0.8;
+}
+h2,p {
+  color: #658ec6;
+  font-weight: 500;
+  opacity: 0.8;
+}
+h3 {
+  color: #426696;
+  font-weight: 600;
+  opacity: 0.8;
+}
 main {
+  font-family: 'Poppins', sans-serif;
   min-height: 100vh; /** take up full monitor**/
   background: linear-gradient(to right top,#65dfc9,#6cdbeb );
 
@@ -26,6 +43,7 @@ main {
   border-radius: 2rem; /** make border corner round**/
   z-index: 2; /*the bigger the number the .glass will be the upper layer compare to the circle*/
   backdrop-filter: blur(1rem); /*blur effect for .glass*/
+  display: flex; /* display flex is used to put parts inside glass section (.dashboard (left) and .game(right)) vertical in the same horizontal (line), kinda like bootstrap*/
 }
 
 .circle1,
@@ -47,4 +65,61 @@ main {
 .circle2 {
   bottom: 5%;
   left: 15%;
+}
+.dashboard {
+  flex: 1; /*take up all the space it can in section glass*/
+
+  /* bleow is to easy change direction*/
+  display: flex; /*IT will make everything contained in dashboard horizontally*/
+  flex-direction: column;  /*it will return from horizontal to column*/
+  align-items: center; /*this tag only work when there is display: flex*/
+  justify-content: space-evenly; /* to increase evently the space beteen div*/
+  background:
+    linear-gradient(
+    to right bottom, rgba(255,255,255, 0.7), rgba(255,255,255, 0.3));
+  border-radius: 2rem; /*curve the border box*/
+  padding: 3rem;
+}
+.link {
+  display: flex;
+  margin: 2rem 0rem;
+  padding: 1rem 5rem;
+}
+.link h2 {
+  padding: 0rem 2rem;
+}
+.pro {
+  background: linear-gradient(to right top,#65dfc9,#6cdbeb );
+  border-radius: 2rem;
+  color: white;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+}
+.pro h2 {
+  width: 40%;
+  color: white;
+  font-weight: 600;
+}
+
+/*games section*/
+.games {
+  flex: 2; /*compare to .dashboard, it will take up twice amount of space in section glass*/
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly; /* to increase evently the space beteen div*/
+  margin: 5rem;
+}
+.status {
+  margin-bottom: 3rem;
+}
+.status input {
+  background:
+    linear-gradient(to right bottom,
+    rgba(255,255,255, 0.7),
+    rgba(255,255,255, 0.3));
+  border: none;
+  width: 50%;
+  padding: 0.5rem;
+  border-radius: 2rem;
 }
