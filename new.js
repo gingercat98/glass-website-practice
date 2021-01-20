@@ -219,32 +219,176 @@ var myData = myArray[1][2]; //result: 6.
 //Second [] is for the index of value inside the small array
 
 
-0:46:30 push()
-0:47:29 pop()
-0:48:33 shift()
-0:49:23 unshift()
-0:50:36 Shopping List
-0:51:41 Write Reusable with Functions
-0:53:41 Arguments
-0:55:43 Global Scope
-0:59:31 Local Scope
-1:00:46 Global vs Local Scope in Functions
-1:02:40 Return a Value from a Function
-1:03:55 Undefined Value returned
-1:04:52 Assignment with a Returned Value
-1:05:52 Stand in Line
-1:08:41 Boolean Values
-1:09:24 If Statements
-1:11:51 Equality Operator
-1:13:18 Strict Equality Operator
-1:14:43 Comparing different values
-1:15:38 Inequality Operator
-1:16:20 Strict Inequality Operator
-1:17:05 Greater Than Operator
-1:17:39 Greater Than Or Equal To Operator
-1:18:09 Less Than Operator
-1:18:44 Less Than Or Equal To Operator
-1:19:17 And Operator
+//push(). Add another array inside an array //
+var ourArray = ['sad', 'J', 'cat'];
+ourArray.push( ['happy', 'joy']);
+//equal ['sad', 'J', 'cat', ['happy', 'joy']]
+
+//pop(). Remove an item in the array//
+var ourArray = ['sad', 'J', 'cat'];
+var removeOurArray = ourArray.pop();
+//removeOurArray equal 'cat', ourArray equal ['sad', 'J']
+
+
+// shift(). Remove the first element of array//
+var ourArray = ['sad', 'J', 'cat'];
+var removeOurArray = ourArray.shift();
+//removeOurArray equal 'sad', ourArray equal ['J', 'cat']
+
+
+// unshift(). Add element to the beginning of the array//
+var ourArray = ['sad', 'J', 'cat'];
+ourArray.shift(); //removeOurArray equal 'sad', ourArray equal ['J', 'cat']
+ourArray.unshift('happy');
+//ourArray equal ['happy', 'J', 'cat']//
+
+// Shopping List. example for nested array//
+var myList = [ ['cereal',3], ['milk',2], ['bananas',3], ['juice',e], ['eggs',12]];
+
+//Write Reusable with Functions//
+function ourName() {
+  console.log('Hi world');
+}
+ourName(); //function is being called//
+ourName();
+ourName();
+
+//Arguments//
+function ourFunction(a,b) {
+  console.log(a-b);
+}
+ourFunction (10,5); //output 5
+
+
+//Global Scope. Visibility of function//
+var myGlobal = 10;
+.....
+
+//Local Scope. variable only visible inside a function//
+function myLocalScope() {
+  var myvar = 5;   //local scope
+  console.log(myvar); //result show 5
+}
+myLocalScope();
+console.log(myvar); //will be error since it want to acess the var outside a function
+
+ //Global vs Local Scope in Functions//
+ //We can have both Global vs Local Scope at the same name//
+
+ var outWear = 'T-shirt'; //Gobal scope as it is declared outside function//
+
+ function myOutfit() {
+   var outerWear = "sweater"
+   return outerWear;
+ }
+
+ console.log(myOutfit()); //Result "sweater"
+
+
+//Return a Value from a Function//
+function minusSeven(num) {
+  return num - 7;
+}
+console.log(minusSeven(10));
+
+
+// Undefined Value returned//
+var sum = 6 ;
+function addFive() {
+  sum += 5; //Will not return aything since we not put rerturn before var//
+}
+
+// Assignment with a Returned Value//
+var changed = 0; //global variable
+
+function change(num) {
+  return (num + 5) / 3;
+}
+changed = change(10);
+
+//Stand in Line//
+check again...
+
+
+//Boolean Values. TRue or False//
+function welcomeToBoolean() {
+  return true;
+}
+
+
+//If Statements//
+function ourTRueORFAlse(isItTrue) {
+  if (isItTRue) {
+    return "Yes, it is true";
+  }
+  return "No it is not true";
+}
+
+// Equality Operator == //
+function test (val) {
+  if (val == 12) {
+    return "Equal";
+  }
+  return "Not Equal";
+}
+console.log(test(10)); //result not equal
+
+// Strict Equality Operator ===, more sensitive like string number //
+/*
+3 === 3 true
+3 === '3'  false
+*/
+
+
+// Comparing different values //
+function test (val) {
+  if (val == 12) {
+    return "Equal";
+  }
+  return "Not Equal";
+}
+console.log(test("12")); //result  equal eventhough it a string not number
+
+
+// Comparing with Inequality Operator (not equal)  != //
+function test (val) {
+  if (val != 12) {
+    return "Not Equal";
+  }
+  return " Equal";
+}
+console.log(test(10)); // not Equal
+
+
+// Strict Inequality Operator, more sensitive to different value types string, number,.. //
+// !== //
+
+
+// Greater Than Operator > //
+function test (val) {
+  if (val > 12) {
+    return "over";
+  }
+  return " not over";
+}
+console.log(test(10)); // not over
+
+// Greater Than Or Equal To Operator >= //
+
+// Less Than Operator < //
+
+// Less Than Or Equal To Operator <= //
+
+// And Operator &&. Check if 2 things are true at the same time//
+function test (val) {
+  if (val > 12 && val >50) {
+    return "yes";
+  }
+  return " no";
+}
+console.log(test(10));
+
+
 Or Operator
 Else Statements
  Else If Statements
