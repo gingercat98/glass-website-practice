@@ -389,9 +389,217 @@ function test (val) {
 console.log(test(10));
 
 
-Or Operator
-Else Statements
- Else If Statements
- Logical Order in If Else Statements
- Chaining If Else Statements
- Golf Code
+//Or Operator || //
+function test (val) {
+  if (val > 12 || val >50) {
+    return "yes";
+  }
+  return " no";
+}
+console.log(test(10));
+
+// Else Statements //
+function test (val) {
+  if (val > 12 || val >50) {
+    return "yes";
+  }
+  else {
+    return " no";
+}
+console.log(test(10));
+
+
+ // Else If Statements. Multiple conditions//
+ function test (val) {
+   if (val > 10) {
+     return "yes";
+   }
+   else if (val <5) {
+     return " no";
+ }
+    else {
+      return "cancel"
+    }
+
+ // Logical Order in If Else Statements //
+//order of value is important //
+
+
+ // Chaining If Else Statements //
+function test(number) {
+  if (number < 5) {
+    return 'Tiny';
+  }
+  else if (number < 10) {
+    return 'Small';
+  }
+  else if (number < 15) {
+    return 'Medium';
+  }
+  else if (number < 20) {
+    return 'Large';
+  }
+  else {
+    return 'Huge';
+  }
+}
+console.log(test(7));
+
+
+//Golf Code example//
+
+// Switch Statements, instead of if else //
+function caseSwitch (val) {
+  var result = '';
+  switch (val) {
+    case 1:
+      answear = "alpha";
+      break;
+    case 2:
+      answear = "beta";
+      break;
+    case 3:
+      answear = "gamma";
+      break;
+    case 4:
+      answear = "delta";
+      break;
+  }
+  return result;
+}
+console.log(caseSwitch(1));
+
+
+// Default Option in Switch Statements. default = Kinda like else //
+function caseSwitch (val) {
+  var result = '';
+  switch (val) {
+    case 1:
+      answear = "alpha";
+      break;
+    case 2:
+      answear = "beta";
+      break;
+    case 3:
+      answear = "gamma";
+      break;
+    case 4:
+      answear = "delta";
+      break;
+    default:
+      answear = "others";
+      break;
+  }
+  return result;
+}
+console.log(caseSwitch(1));
+
+// Identical Options in Switch Statements, when multiple input //
+function size(val){
+  var result ='';
+  switch (val) {
+    case 1:
+    case 2:
+    case 3:
+      answear ='low';
+      break;
+    case 4:
+    case 5:
+    case 6:
+      answear ='mid';
+      break;
+    case 7:
+    case 8:
+    case 9:
+      answear ='high';
+      break;
+  }
+  return result;
+}
+
+// Replacing If Else Chains with Switch //
+
+// Returning Boolean Values from Functions //
+
+
+// Return Early Pattern for Functions //
+
+// Counting Cards //
+
+// Build Objects. Similar to array//
+var ourDog ={ //object
+  'name': 'Max',
+  'legs' : 4,
+  'tails' : 1,
+  'friends' : ['everything!']
+};
+
+var myDog = { //object
+  'name': 'Lulu',
+  'legs' : 3,
+  'tails' : 2,
+  'friends' : []
+}
+
+
+// Dot Notation .value//
+var test = {
+  'hat': 'ballcap',
+  'shirt': 'jersey'
+};
+
+var hatValue = test.hat; // 'ballcap'
+var shirtValue = test.shirt; //'Jersey'
+
+// Bracket Notation //
+// Variables //
+1:53:34 Updating Object Properties
+1:54:30 Add New Properties to Object
+1:55:19 Delete Properties from Object
+1:55:54 Objects for Lookups
+1:57:43 Testing Objects for Properties
+1:59:15 Manipulating Complex Objects
+2:01:00 Nested Objects
+2:01:53 Nested Arrays
+2:03:06 Record Collection
+2:10:15 While Loops
+2:11:35 For Loops
+2:13:56 Odd Numbers With a For Loop
+2:15:28 Count Backwards With a For Loop
+2:17:08 Iterate Through an Array with a For Loop
+2:19:43 Nesting For Loops
+2:22:45 Do...While Loops
+2:24:12 Profile Lookup
+2:28:18 Random Fractions
+2:28:54 Random Whole Numbers
+2:30:21 Random Whole Numbers within a Range
+2:31:46 parseInt Function
+2:32:36 parseInt Function with a Radix
+2:33:29 Ternary Operator
+2:34:57 Multiple Ternary Operators
+2:36:57 var vs let
+2:39:02 var vs let scopes
+2:41:32 const Keyword
+2:43:40 Mutate an Array Declared with const
+2:44:52 Prevent Object Mutation
+2:47:17 Arrow Functions
+2:28:24 Arrow Functions with Parameters
+2:49:27 Higher Order Arrow Functions
+2:53:04 Default Parameters
+2:54:00 Rest Operator
+2:55:31 Spread Operator
+2:57:18 Destructuring Assignment: Objects
+3:00:18 Destructuring Assignment: Nested Objects
+3:01:55 Destructuring Assignment: Arrays
+3:03:40 Destructuring Assignment with Rest Operator to Reassign Array
+3:05:05 Destructuring Assignment to Pass an Object
+3:06:39 Template Literals
+3:10:43 Simple Fields
+3:12:24 Declarative Functions
+3:12:56 class Syntax
+3:15:11 getters and setters
+3:20:25 import vs require
+3:22:33 export
+3:23:40 * to Import
+3:24:50 export default
+3:25:26 Import a Default Export
